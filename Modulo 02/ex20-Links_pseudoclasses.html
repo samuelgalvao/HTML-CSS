@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        a:active{
+            color: rgb(68, 0, 0);
+        }
+
+        a::after{
+            content: ' [LINK]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositorio Github</a></li>
+    <li><a href="https://youtube.com/cursoemvideo/" target="_blank">canal do Youtube</a></li>
+    <li><a href="https://www.cursoemvideo.com" target="_blank">Site do curso em video</a></li>
+</body>
+</html>
