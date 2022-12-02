@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Test</title>
+    <style>
+        .square{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            border-radius: 4px;
+            background-color: lightcyan;
+            display: inline-block;
+        }
+        .bg1{
+            background-color: rgb(15, 15, 15);
+        }
+        .bg2{
+            background-image: linear-gradient(to bottom, rgb(17, 45, 82), rgb(0, 11, 24));
+        }
+        .bg3{
+            background-image: url('imagens/_wallpaper01.jpeg');
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="square bg1"></div>
+    <div class="square bg2"></div>
+    <div class="square bg3"></div>
+</body>
+</html>
