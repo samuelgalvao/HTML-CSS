@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Dom 01</title>
+    <link rel="stylesheet" href="style-dom.css">
+</head>
+<body>
+    <h1>Dom Exercise</h1>
+    <p>Examples:</p>
+    <ul class="list">
+        <li id="item1">Item 1</li>
+        <li  class="item2">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <input type="button" value="Delete item 4" onclick="delete_item()">
+    <div class="container">
+
+    </div>
+    <script>
+        //Get Elements
+        const item1 = document.getElementById('item1');
+        const item2 = document.querySelector('.item2');
+        const item3 = document.getElementsByTagName('li')[2];
+        const list  = document.querySelector('.list')
+        var itemNew = document.createElement('li')
+
+        //Modify Elements
+        item1.innerText += ' used getElementById' 
+        item2.innerHTML += ' used querySelector'
+        item3.textContent += ' used getElementByTagName'
+
+        itemNew.innerText = 'Item 4 used appendChild'
+        list.appendChild(itemNew)
+
+        //Remove Elements
+        function delete_item(){
+            list.removeChild(itemNew)
+        }
+
+        //Create Elements
+        var el = document.createElement('div')
+        const container = document.querySelector('.container')
+
+        el.classList = 'created-div'
+        container.appendChild(el)
+
+        //Create Elements (Before)
+        var el2 = document.createElement('div')
+
+        el2.classList = "div-before"
+        container.insertBefore(el2, el) // 2 parameter
+    </script>
+</body>
+</html>
